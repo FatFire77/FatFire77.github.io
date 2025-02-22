@@ -1,1 +1,431 @@
-<h1>hello world!</h1>
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>益汇联（上海）财税咨询有限公司 - 专业的核定征收服务提供商</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+
+        .modal {
+            display: none;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0066CC",
+                        secondary: "#4A90E2",
+                    },
+                    borderRadius: {
+                        none: "0px",
+                        sm: "4px",
+                        DEFAULT: "8px",
+                        md: "12px",
+                        lg: "16px",
+                        xl: "20px",
+                        "2xl": "24px",
+                        "3xl": "32px",
+                        full: "9999px",
+                        button: "8px",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-white scroll-smooth">
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <img src="./images/logo.png" class="logo">
+                    <span class="ml-2 text-lg font-medium">益汇联（上海）财税咨询</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary transition-colors">首页</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition-colors">公司简介</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary transition-colors">核心服务</a>
+                    <!-- <a href="#team" class="text-gray-700 hover:text-primary transition-colors">关于我们</a> -->
+                    <!-- <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">联系我们</a> -->
+                    <!-- <button
+                        class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                        立即咨询
+                    </button> -->
+                </div>
+                <button class="md:hidden w-10 h-10 flex items-center justify-center" id="mobile-menu-button">
+                    <i class="ri-menu-line text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div class="md:hidden hidden bg-white border-t border-gray-100" id="mobile-menu">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="#home" class="block text-gray-700 hover:text-primary transition-colors">首页</a>
+                <a href="#about" class="block text-gray-700 hover:text-primary transition-colors">公司简介</a>
+                <a href="#services" class="block text-gray-700 hover:text-primary transition-colors">核心服务</a>
+                <!-- <a href="#team" class="block text-gray-700 hover:text-primary transition-colors">关于我们</a> -->
+                <!-- <a href="#contact" class="block text-gray-700 hover:text-primary transition-colors">联系我们</a> -->
+                <button
+                    class="w-full bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors">
+                    立即咨询
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen relative flex items-center"
+        style="background-image: url('https://public.readdy.ai/ai/img_res/b301761679a706173429159eb4269761.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-white/30"></div>
+        <div class="container mx-auto px-6 relative">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl font-bold text-gray-900 mb-6">
+                    专业的核定征收服务提供商
+                </h1>
+                <p class="text-xl text-gray-700 mb-8">
+                    一站式税务筹划 | 园区政策直连 | 全程代办服务
+                </p>
+                <!-- <div class="flex space-x-4">
+                    <button
+                        class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 transition-colors text-lg whitespace-nowrap">
+                        立即咨询
+                    </button>
+                    <button
+                        class="bg-white text-primary px-8 py-3 !rounded-button hover:bg-gray-50 transition-colors text-lg whitespace-nowrap">
+                        了解更多
+                    </button>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">公司简介</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative h-[400px] rounded-lg overflow-hidden">
+                    <img src="https://public.readdy.ai/ai/img_res/88c5f1c0e49f1d2e2a4558272df875c5.jpg"
+                        class="absolute inset-0 w-full h-full object-cover" alt="公司环境" />
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">专注有限公司核定征收，助力企业合规节税。</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        益汇联（上海）财税咨询有限公司是一家专注于为中小企业提供有限公司核定征收服务的专业机构。
+                        我们拥有资深财税专家团队，熟悉国家及地方税收政策，致力于帮助企业优化税务结构，降低税负，实现合规经营。
+                    </p>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-primary mb-2">8+</div>
+                            <div class="text-gray-600">服务年限</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-primary mb-2">2000+</div>
+                            <div class="text-gray-600">服务客户</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-primary mb-2">100%</div>
+                            <div class="text-gray-600">客户满意度</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">核心服务</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-file-list-3-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">有限公司核定：精准适配，优化税负</h3>
+                    <p class="text-gray-600 mb-6">
+                        在企业经营过程中，合理的税务处理是提升竞争力的关键一环。我们专注于为有限公司提供专业的核定服务。深入了解企业的业务模式、财务状况和行业特点，运用丰富的经验和专业知识，为企业量身定制最适宜的核定方案。确保企业在合法合规的前提下，实现税负的优化，释放更多的资金用于业务拓展和创新发展。
+                    </p>
+                  
+                </div> -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-calculator-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">专业核定征收：权威可靠，高效服务</h3>
+                    <p class="text-gray-600 mb-6">
+                        核定征收是一种重要的征税方式，我们拥有一支由资深税务专家和专业顾问组成的团队，对核定征收政策有着精准的把握和深入的研究。无论是在政策解读、资料准备，还是在申报流程的推进上，都能为企业提供全方位的支持。凭借专业的服务和高效的执行，帮助企业顺利完成核定征收，避免税务风险，享受政策红利。
+                    </p>
+                    <!-- <button class="text-primary hover:text-primary/80 transition-colors flex items-center">
+                        了解更多
+                        <i class="ri-arrow-right-line ml-2"></i>
+                    </button> -->
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-shield-check-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">致力税务筹划：量身定制，创造价值
+                    </h3>
+                    <p class="text-gray-600 mb-6">
+                        税务筹划不仅仅是降低税负，更是一种战略规划。我们致力于为企业提供全面、深入的税务筹划服务。从企业的设立、运营到扩张的各个阶段，为企业提供前瞻性的税务建议和方案。通过合理的税务安排，优化企业的财务结构，提升企业的经济效益。结合企业的长期发展目标，制定可持续的税务策略，为企业创造更大的价值。
+                    </p>
+                    <!-- <button class="text-primary hover:text-primary/80 transition-colors flex items-center">
+                        了解更多
+                        <i class="ri-arrow-right-line ml-2"></i>
+                    </button> -->
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-shield-check-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">坚持园区垫税：贴心服务，助力发展
+                    </h3>
+                    <p class="text-gray-600 mb-6">
+                        为了帮助企业解决资金周转的难题，我们坚持提供园区垫税服务。在企业面临税款缴纳压力时，我们凭借雄厚的资金实力和良好的信誉，为企业先行垫付税款，确保企业的正常运营不受影响。这一贴心的服务，不仅体现了我们对企业的支持和关怀，更帮助企业在发展过程中赢得了宝贵的时间和空间，助力企业在市场竞争中脱颖而出。
+                    </p>
+                    <!-- <button class="text-primary hover:text-primary/80 transition-colors flex items-center">
+                        了解更多
+                        <i class="ri-arrow-right-line ml-2"></i>
+                    </button> -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">联系我们</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">联系方式</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center">
+                                <i class="ri-map-pin-line text-primary"></i>
+                            </div>
+                            <span class="text-gray-600">上海市浦东新区陆家嘴环路 1000 号恒生银行大厦 25 楼</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center">
+                                <i class="ri-phone-line text-primary"></i>
+                            </div>
+                            <span class="text-gray-600">021-5888 8888</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center">
+                                <i class="ri-mail-line text-primary"></i>
+                            </div>
+                            <span class="text-gray-600">contact@yihuiliangroup.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">姓名</label>
+                            <input type="text"
+                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                                required />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">电话</label>
+                            <input type="tel"
+                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                                required />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">咨询内容</label>
+                            <textarea
+                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary h-32"
+                                required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                            提交咨询
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <!-- <span class="text-2xl font-['Pacifico'] text-white mb-4 block">logo</span> -->
+                    <img src="./images/logo.png" class="logo">
+                    <p class="text-gray-400">益汇联（上海）财税咨询有限公司</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">快速导航</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#home" class="text-gray-400 hover:text-white transition-colors">首页</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="text-gray-400 hover:text-white transition-colors">公司简介</a>
+                        </li>
+                        <li>
+                            <a href="#services" class="text-gray-400 hover:text-white transition-colors">核心服务</a>
+                        </li>
+                        <!-- <li>
+                            <a href="#team" class="text-gray-400 hover:text-white transition-colors">关于我们</a>
+                        </li> -->
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">联系方式</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>电话：13248109864</li>
+                        <!-- <li>邮箱：contact@yihuiliangroup.com</li>
+                        <li>地址：上海市浦东新区陆家嘴环路 1000 号恒生银行大厦 25 楼</li> -->
+                    </ul>
+                </div>
+                <!-- <div>
+                    <h4 class="text-lg font-bold mb-4">关注我们</h4>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                            <i class="ri-wechat-fill text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                            <i class="ri-weibo-fill text-xl"></i>
+                        </a>
+                    </div>
+                </div> -->
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>© 2025 益汇联（上海）财税咨询有限公司 版权所有</p>
+                <!-- <p class="mt-2">沪ICP备2025000000号-1</p> -->
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-50 space-y-4">
+        <!-- <button id="chat-button"
+            class="w-14 h-14 bg-primary text-white rounded-full shadow-lg hover:bg-primary/90 transition-colors flex items-center justify-center">
+            <i class="ri-customer-service-2-line text-2xl"></i>
+        </button> -->
+        <button id="scroll-top"
+            class="w-14 h-14 bg-white text-gray-600 rounded-full shadow-lg hover:bg-gray-50 transition-colors flex items-center justify-center hidden">
+            <i class="ri-arrow-up-line text-2xl"></i>
+        </button>
+    </div>
+
+    <div id="chat-modal" class="modal fixed inset-0 bg-black/50 z-50 items-center justify-center">
+        <div class="bg-white rounded-lg w-full max-w-md mx-4">
+            <div class="p-6 border-b border-gray-200 flex items-center justify-between">
+                <h3 class="text-xl font-bold">在线咨询</h3>
+                <button class="text-gray-400 hover:text-gray-600" id="close-chat">
+                    <i class="ri-close-line text-2xl"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">姓名</label>
+                        <input type="text"
+                            class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                            required />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">电话</label>
+                        <input type="tel"
+                            class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                            required />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">咨询内容</label>
+                        <textarea
+                            class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary h-32"
+                            required></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 transition-colors">
+                        提交咨询
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileMenuButton = document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const scrollTopButton = document.getElementById("scroll-top");
+            // const chatButton = document.getElementById("chat-button");
+            const chatModal = document.getElementById("chat-modal");
+            const closeChatButton = document.getElementById("close-chat");
+            mobileMenuButton.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+            window.addEventListener("scroll", () => {
+                if (window.pageYOffset > 300) {
+                    scrollTopButton.classList.remove("hidden");
+                } else {
+                    scrollTopButton.classList.add("hidden");
+                }
+            });
+
+            scrollTopButton.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
+            // chatButton.addEventListener("click", () => {
+            //     chatModal.classList.add("active");
+            // });
+
+            closeChatButton.addEventListener("click", () => {
+                chatModal.classList.remove("active");
+            });
+
+            chatModal.addEventListener("click", (e) => {
+                if (e.target === chatModal) {
+                    chatModal.classList.remove("active");
+                }
+            });
+
+            document.querySelectorAll("form").forEach((form) => {
+                form.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    const formData = new FormData(form);
+                    console.log("Form submitted:", Object.fromEntries(formData));
+                    form.reset();
+                    if (chatModal.classList.contains("active")) {
+                        chatModal.classList.remove("active");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
